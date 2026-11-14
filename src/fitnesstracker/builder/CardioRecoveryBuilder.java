@@ -1,7 +1,9 @@
-public class PowerliftingBuilder implements WorkoutBuilder {
+package fitnesstracker.builder;
+
+public class CardioRecoveryBuilder implements WorkoutBuilder {
     private final WorkoutPlan plan;
 
-    public PowerliftingBuilder() {
+    public CardioRecoveryBuilder() {
         this.plan = new WorkoutPlan();
     }
 
@@ -31,8 +33,8 @@ public class PowerliftingBuilder implements WorkoutBuilder {
 
     @Override
     public WorkoutPlan build() {
-        if (plan.getMainExercises() == null || plan.getMainExercises().isEmpty()) {
-            throw new IllegalStateException("Powerlifting plan requires main compound exercises.");
+        if (plan.getCardio() == null || plan.getCardio().isEmpty()) {
+            throw new IllegalStateException("Recovery plan requires a cardio session.");
         }
         return plan;
     }

@@ -1,3 +1,5 @@
+package fitnesstracker.builder;
+
 public class WorkoutPlan {
     private String warmUp;
     private String mainExercises;
@@ -43,7 +45,7 @@ public class WorkoutPlan {
     public String toString() {
         return "WorkoutPlan [WarmUp=" + (warmUp != null ? warmUp : "None")
                 + " | Main=" + (mainExercises != null ? mainExercises : "None")
-                + " | Accessories=" + (accessories != null ? accessories != "" ? accessories : "None" : "None")
+                + " | Accessories=" + (accessories != null && !accessories.isEmpty() ? accessories : "None")
                 + " | Cardio=" + (cardio != null ? cardio : "None") + "]";
     }
 }
