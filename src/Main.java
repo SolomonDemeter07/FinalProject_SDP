@@ -1,4 +1,3 @@
-package fitnesstracker;
 
 import fitnesstracker.adapter.AppleWatchAdapter;
 import fitnesstracker.adapter.AppleWatchSdk;
@@ -27,7 +26,7 @@ public class Main {
         System.out.println("\n=== SCENARIO 3: POST-WORKOUT LOG ANALYTICS VIA VISITOR ===");
         List<LogElement> weeklyLogs = Arrays.asList(
                 new WeightliftingLog("Barbell Squat", 5, 5, 140.0),
-                new WeightliftingLog("Bench Press", 2, 8, 110.0),
+                new WeightliftingLog("Bench Press", 5, 5, 110.0),
                 new TreadmillLog(50, 12.0, 4.0)
         );
         trackerFacade.runPostWorkoutAudit(weeklyLogs);
